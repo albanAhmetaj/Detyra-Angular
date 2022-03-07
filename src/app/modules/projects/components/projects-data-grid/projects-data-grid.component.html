@@ -1,0 +1,12 @@
+<kendo-grid
+  [data]="staticProjects"
+  [pageSize]="10"
+  [pageable]="true"
+  [selectable]="true"
+  (selectionChange)="selectProject($event)"
+  >
+  <kendo-grid-column field="id" title="ID">
+  </kendo-grid-column>
+  <kendo-grid-column field="name" title="name">
+  </kendo-grid-column>
+</kendo-grid>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="header">
+    <a routerLink="basic-info" routerLinkActive="active" (click)="isBasic = true">Basic Info</a>
+    <a routerLink="projects" routerLinkActive="active" (click)="isBasic = false">Projects</a>
+  </div>
+  <div *ngIf="isBasic">
+    <app-basic-info [employees]="employees$ | async" [employeeForm]="employeeForm"></app-basic-info>
+  </div>
+  <div *ngIf="!isBasic">
+    <app-projects></app-projects>
+  </div>
+  <h5 class= "my-2" style="font-weight: bold;">Employee Data Grid</h5>
+  <app-employee-data-grid [employees]="employees$ | async" [employeeForm]="employeeForm"> </app-employee-data-grid>
+</div>

@@ -1,0 +1,15 @@
+<kendo-grid
+[data]="staticEmployees"
+[pageSize]="10"
+[pageable]="true"
+[selectable]="true"
+(selectionChange)="selectEmployee($event)"
+>
+<!-- [kendoGridBinding]="staticEmployees" -->
+  <kendo-grid-column field="id" title="ID">
+  </kendo-grid-column>
+  <kendo-grid-column field="firstName" title="firstName">
+  </kendo-grid-column>
+  <kendo-grid-column field="lastName" title="lastName">
+  </kendo-grid-column>
+</kendo-grid>
